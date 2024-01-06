@@ -21,9 +21,9 @@ const routes = [
     component: () => import('../views/MenuView.vue')
   },
   {
-    path: '/login',
-    name: 'login',
-    omponent: () => import('../views/LoginView.vue')
+    path: '/Login',
+    name: 'Login',
+    component: () => import('../views/LoginView.vue')
   },
   {
     path: '/register',
