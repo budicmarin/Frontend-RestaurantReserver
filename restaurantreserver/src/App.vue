@@ -1,8 +1,9 @@
 <template>
+  
   <nav>
-    <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/menu">Menu</router-link>
+    <router-link to="/login">Login</router-link> |
+    <router-link to="/register">Register</router-link>
   </nav>
   <router-view/>
 </template>
@@ -14,6 +15,13 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100vh; /* Set the height to the full viewport height */
+  background-image:url( '../src/assets/pozadina.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {

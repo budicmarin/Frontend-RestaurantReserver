@@ -35,6 +35,11 @@ const routes = [
     name: 'notification',
     component: () => import('../views/NotificationView.vue')
   },
+  {
+    path: '/reservation',
+    name: 'reservation',
+    component: () => import('../views/ReservationView.vue')
+  }
 ]
 
 const router = createRouter({
