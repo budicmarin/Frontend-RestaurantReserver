@@ -32,14 +32,7 @@ body {
             
         }
 
-        #container {e
-            display: inline-block;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            
-            
-        }
+      
 
 
 

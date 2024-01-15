@@ -1,6 +1,7 @@
 <template>
-    <h1>Dobrodošli na početnu stranicu Resturant Reserver-a!</h1>
+
   	<div>
+      <h1>Dobrodošli na početnu stranicu Resturant Reserver-a!</h1>
     <a href="/notification">
     <button type="button" class="btn btn-primary mt-3" >Obavijesti</button>
     </a>
@@ -15,10 +16,11 @@
     <a href="/reservation">
     <button type="button" class="btn btn-primary mt-3" >Rezervacija</button>
     </a>
- 
-  </div>
     <br>
     <h1>Hvala vam što ste s nama!</h1>
+  </div>
+  
+  
 </template>
 <style >
 .button-container {
