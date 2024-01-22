@@ -27,6 +27,9 @@ text-align: center;
 body {
             text-align: center;
             font-family: Arial, sans-serif;
+            color: black;
+            font-size: large;
+            font:bold;
             
 
             

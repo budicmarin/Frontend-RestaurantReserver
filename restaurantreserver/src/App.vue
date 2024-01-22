@@ -14,12 +14,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000203;
   height: 100vh; /* Set the height to the full viewport height */
   background-image:url( '../src/assets/pozadina.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.9;
+ 
   display: flex;
   flex-direction: column;
 }
@@ -29,7 +31,7 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #000000;
 
     &.router-link-exact-active {
       color: #42b983;
