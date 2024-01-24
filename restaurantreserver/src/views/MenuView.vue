@@ -24,28 +24,18 @@
 </template>
 
 <script>
+import {menuItems } from '@/store';
 export default {
   data() {
     return {
       restaurantName: "My Restaurant",
-      menuItems: [
-      { category: "pizzas", name: "Margherita",  price: 8.5 },
-        { category: "pizzas", name: "Pepperoni", price: 9.5 },
-        { category: "pizzas", name: "Vegetarian", price: 10.0 },
-        
-        { category: "sides", name: "French Fries",  price: 3.5 },
-        { category: "sides", name: "Onion Rings",  price: 4.0 },
-        
-        { category: "desserts", name: "Chocolate Cake", price: 5.0 },
-        { category: "desserts", name: "Cheesecake", price: 6.0 },
-
-      ],
+      
       selectedCategory: "pizzas",
     };
   },
   computed: {
     selectedCategoryItems() {
-      return this.menuItems.filter(item => item.category === this.selectedCategory);
+      return menuItems.filter(item => item.category === this.selectedCategory);
     },
   },
   methods: {
