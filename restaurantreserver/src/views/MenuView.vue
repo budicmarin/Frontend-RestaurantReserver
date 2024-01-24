@@ -2,14 +2,12 @@
   <div class="menu">
     <h2>{{ restaurantName }} Menu</h2>
 
-    <!-- Tab buttons -->
     <div class="tab-buttons">
       <button @click="selectCategory('pizzas')" :class="{ active: selectedCategory === 'pizzas' }">Pizzas</button>
       <button @click="selectCategory('sides')" :class="{ active: selectedCategory === 'sides' }">Sides</button>
       <button @click="selectCategory('desserts')" :class="{ active: selectedCategory === 'desserts' }">Desserts</button>
     </div>
 
-    <!-- Display selected category items -->
     <div v-if="selectedCategoryItems.length > 0" class="menu-items">
       <div v-for="(item, index) in selectedCategoryItems" :key="index" class="menu-item">
         <h3>{{ item.name }}</h3>
@@ -29,7 +27,6 @@ export default {
   data() {
     return {
       restaurantName: "My Restaurant",
-      
       selectedCategory: "pizzas",
     };
   },
