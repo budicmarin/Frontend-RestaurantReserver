@@ -20,7 +20,9 @@
 </template>
 
 <script>
-import {user} from "@/store";
+import { user } from "@/store";
+import { curentUser } from "@/store"
+
 
 export default {
   name: "login",
@@ -37,10 +39,22 @@ export default {
       const foundUser = user.find(user => user.email === this.username);
 
       if (foundUser && foundUser.password === this.password) {
+        curentUser.authenticated = true;
+        curentUser.email = foundUser.email;
+        curentUser.id = foundUser.id;
+        curentUser.phoneNumber = foundUser.phoneNumber;
+        curentUser.name = foundUser.name;
+        curentUser.surname = foundUser.surname;
+
+        
+        
+        console.log(curentUser);
+        console.log(user);
         this.$router.replace({ name: "userview" });
       } else {
-        // Add logic for handling incorrect username/password
+        
         console.log("Invalid username or password");
+        
       }
     },
   },

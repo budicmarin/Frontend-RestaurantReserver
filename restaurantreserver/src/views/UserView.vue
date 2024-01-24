@@ -9,8 +9,15 @@
     </div>
     <div class="flex-row-b">
       <div class="podaci-o-osobi">
-        <span class="podaci-o-kupcu">Podaci o Kupcu</span>
-        <p></p>
+        <span class="podaci-o-kupcu">Podaci o Kupcu <br/>
+           {{ curentUser.name }}<br/>
+       {{ curentUser.surname }}<br/>
+        {{ curentUser.email }}<br/>
+      {{ curentUser.phoneNumber }}<br/>
+    </span>
+       
+       
+   
       </div>
       <div class="podaci-o-narudbama">
         <span class="prosle-rezervacije">Prošle Rezervacije</span>
@@ -24,10 +31,16 @@
 </template>
 
 <script>
+import { curentUser } from '@/store';
 export default {
   name: "userview",
-  data() {
+  components: {
    
+  },
+  data() {
+    return {
+      curentUser
+   }
   },
   methods: {
     click() {

@@ -28,10 +28,20 @@ var menuItems= [
     { category: "desserts", name: "Cheesecake", price: 6.0 },
 
 ];
+var curentUser = {
+    id: 0,
+    name: '',
+    surname: '',
+    email: '',
+    phoneNumber: '',
+    authenticated:'',
 
+
+}
 export {
-
+    
     user,
     rezervacija,
-    menuItems
+    menuItems,
+    curentUser
 }
