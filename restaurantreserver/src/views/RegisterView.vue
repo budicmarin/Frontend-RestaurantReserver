@@ -30,10 +30,7 @@
             <input type="tel" class="form-control" id="examplePhoneNumber" v-model="formData.phoneNumber" placeholder="Enter Broj Telefona" required>
           </div>
 
-          <div class="form-group col-md-12">
-            <!-- Include the DatePickermodel component and pass any necessary props -->
-            <!-- <DatePickermodel /> -->
-          </div>
+  
 
           <div class="form-group col-md-12">
             <label for="exampleInputPassword1">Lozinka</label>
@@ -56,9 +53,9 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import {user} from "@/store";
 
-export default defineComponent({
+export default {
   data() {
     return {
       formData: {
@@ -72,10 +69,27 @@ export default defineComponent({
     };
   },
   methods: {
+    
     onSubmit() {
-      console.log('Registriran', this.formData);
-      // You can perform additional actions here, such as sending the form data to a server.
+      debugger
+     
+      if (this.formData.password === this.formData.confirmPassword) {
+        const newUser = {
+          id: user.length + 1,
+          name: this.formData.name,
+          surname: this.formData.surname,
+          password: this.formData.password,
+          email: this.formData.email,
+          password: this.formData.password
+         
+        };
+        user.push(newUser);
+        
+      
+      }
+      console.log(user);
+      }
     },
-  },
-});
+  
+};
 </script>
