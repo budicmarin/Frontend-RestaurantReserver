@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkrestaurantreserver"]=self["webpackChunkrestaurantreserver"]||[]).push([[933],{8933:function(n,e,r){r.r(e),r.d(e,{default:function(){return d}});var t=r(3396);const u={class:"notification"},a=(0,t._)("h1",null,"Obavijesti",-1),s=(0,t._)("h1",null,"Radno vrijeme",-1),i=(0,t._)("h1",null,"Pon-Sub 10h-24h",-1),l=(0,t._)("h1",null,"Ned zatvoreno",-1),o=[a,s,i,l];function c(n,e){return(0,t.wg)(),(0,t.iD)("div",u,o)}var h=r(89);const v={},f=(0,h.Z)(v,[["render",c]]);var d=f}}]);
+//# sourceMappingURL=933.d562369d.js.map
