@@ -3,13 +3,32 @@
     <h2>{{ restaurantName }} Menu</h2>
 
     <div class="tab-buttons">
-      <button @click="selectCategory('pizzas')" :class="{ active: selectedCategory === 'pizzas' }">Pizzas</button>
-      <button @click="selectCategory('sides')" :class="{ active: selectedCategory === 'sides' }">Sides</button>
-      <button @click="selectCategory('desserts')" :class="{ active: selectedCategory === 'desserts' }">Desserts</button>
+      <button
+        @click="selectCategory('pizzas')"
+        :class="{ active: selectedCategory === 'pizzas' }"
+      >
+        Pizzas
+      </button>
+      <button
+        @click="selectCategory('sides')"
+        :class="{ active: selectedCategory === 'sides' }"
+      >
+        Sides
+      </button>
+      <button
+        @click="selectCategory('desserts')"
+        :class="{ active: selectedCategory === 'desserts' }"
+      >
+        Desserts
+      </button>
     </div>
 
     <div v-if="selectedCategoryItems.length > 0" class="menu-items">
-      <div v-for="(item, index) in selectedCategoryItems" :key="index" class="menu-item">
+      <div
+        v-for="(item, index) in selectedCategoryItems"
+        :key="index"
+        class="menu-item"
+      >
         <h3>{{ item.name }}</h3>
         <p>{{ item.description }}</p>
         <p class="price">{{ item.price }}€</p>
@@ -22,7 +41,7 @@
 </template>
 
 <script>
-import {menuItems } from '@/store';
+import { menuItems } from "@/store";
 export default {
   data() {
     return {
@@ -32,7 +51,9 @@ export default {
   },
   computed: {
     selectedCategoryItems() {
-      return menuItems.filter(item => item.category === this.selectedCategory);
+      return menuItems.filter(
+        (item) => item.category === this.selectedCategory
+      );
     },
   },
   methods: {

@@ -1,53 +1,54 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    component: HomeView,
   },
   {
-    path: '/about',
-    name: 'about',
+    path: "/about",
+    name: "about",
 
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: '/menu',
-    name: 'menu',
-    component: () => import('../views/MenuView.vue')
+    path: "/menu",
+    name: "menu",
+    component: () => import("../views/MenuView.vue"),
   },
   {
-    path: '/Login',
-    name: 'Login',
-    component: () => import('../views/LoginView.vue')
+    path: "/Login",
+    name: "Login",
+    component: () => import("../views/LoginView.vue"),
   },
   {
-    path: '/register',
-    name: 'register',
-    component: () => import('../views/RegisterView.vue')
+    path: "/register",
+    name: "register",
+    component: () => import("../views/RegisterView.vue"),
   },
   {
-    path: '/notification',
-    name: 'notification',
-    component: () => import('../views/NotificationView.vue')
+    path: "/notification",
+    name: "notification",
+    component: () => import("../views/NotificationView.vue"),
   },
   {
-    path: '/reservation',
-    name: 'reservation',
-    component: () => import('../views/ReservationView.vue')
-  }, 
+    path: "/reservation",
+    name: "reservation",
+    component: () => import("../views/ReservationView.vue"),
+  },
   {
-    path: '/userview',
-    name: 'userview',
-    component: () => import('../views/UserView.vue')
-  }
-]
+    path: "/userview",
+    name: "userview",
+    component: () => import("../views/UserView.vue"),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

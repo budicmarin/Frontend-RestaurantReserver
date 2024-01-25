@@ -6,11 +6,24 @@
         <form @submit.prevent="login">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input v-model="username" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input
+              v-model="username"
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input v-model="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input
+              v-model="password"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+            />
           </div>
           <button type="submit" class="btn btn-primary mt-3">Login</button>
         </form>
@@ -21,8 +34,7 @@
 
 <script>
 import { user } from "@/store";
-import { curentUser } from "@/store"
-
+import { curentUser } from "@/store";
 
 export default {
   name: "login",
@@ -35,8 +47,8 @@ export default {
   methods: {
     login() {
       console.log("Login", this.username);
-      
-      const foundUser = user.find(user => user.email === this.username);
+
+      const foundUser = user.find((user) => user.email === this.username);
 
       if (foundUser && foundUser.password === this.password) {
         curentUser.authenticated = true;
@@ -46,15 +58,11 @@ export default {
         curentUser.name = foundUser.name;
         curentUser.surname = foundUser.surname;
 
-        
-        
         console.log(curentUser);
         console.log(user);
         this.$router.replace({ name: "userview" });
       } else {
-        
         console.log("Invalid username or password");
-        
       }
     },
   },

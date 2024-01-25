@@ -1,29 +1,29 @@
 <template>
   <div class="main-container">
-    <div class="flex-row">
-    </div>
+    <div class="flex-row"></div>
     <div class="flex-row-d">
       <div class="ellipse"></div>
-      
+
       <p></p>
     </div>
     <div class="flex-row-b">
       <div class="podaci-o-osobi">
-        <span class="podaci-o-kupcu">Podaci o Kupcu <br/>
-           {{ curentUser.name }}<br/>
-       {{ curentUser.surname }}<br/>
-        {{ curentUser.email }}<br/>
-      {{ curentUser.phoneNumber }}<br/>
-    </span>
-       
-       
-   
+        <span class="podaci-o-kupcu"
+          ><h1>Podaci o Kupcu</h1>
+          <br />
+          <h3>{{ curentUser.name }} {{ curentUser.surname }}</h3>
+          <br />
+
+          <h3>
+            {{ curentUser.email }}<br />{{ curentUser.phoneNumber }}<br />
+          </h3>
+          <br />
+        </span>
       </div>
       <div class="podaci-o-narudbama">
         <span class="prosle-rezervacije">Prošle Rezervacije</span>
       </div>
-      <button class="rectangle-button" @click="click">Nova rezervacija</button
-      >
+      <button class="rectangle-button" @click="click">Nova rezervacija</button>
     </div>
     <div class="slika-div"></div>
     <div class="slika-div-1"></div>
@@ -31,33 +31,24 @@
 </template>
 
 <script>
-import { curentUser } from '@/store';
+import { curentUser } from "@/store";
 export default {
   name: "userview",
-  components: {
-   
-  },
+  components: {},
   data() {
     return {
-      curentUser
-   }
+      curentUser,
+    };
   },
   methods: {
     click() {
-  
-        this.$router.replace({ name: "reservation" });
-      }
-    
+      this.$router.replace({ name: "reservation" });
+    },
   },
 };
 </script>
 
-
-<style >
-
-
-
-
+<style>
 .ellipse {
   position: absolute;
   width: 164px;
@@ -101,23 +92,7 @@ export default {
   z-index: 9;
   border-radius: 45px;
 }
-.podaci-o-kupcu {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 48px;
-  top: 26px;
-  left: 74px;
-  color: #000000;
-  font-family: Inter, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 48px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 10;
-}
+
 .podaci-o-narudbama {
   position: absolute;
   width: 650px;
@@ -156,7 +131,4 @@ export default {
   border: none;
   z-index: 12;
 }
-
-
 </style>
-
