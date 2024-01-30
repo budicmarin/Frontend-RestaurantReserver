@@ -51,7 +51,7 @@
               type="tel"
               class="form-control"
               id="examplePhoneNumber"
-              v-model="formData.phoneNumber"
+              v-model="formData.broj_telefona"
               placeholder="Enter Broj Telefona"
               required
             />
@@ -101,10 +101,10 @@ export default {
   data() {
     return {
       formData: {
-        ime: "",
-        prezime: "",
+        firstName: "",
+        lastName: "",
         email: "",
-        phoneNumber: "",
+        broj_telefona: "",
         password: "",
         confirmPassword: "",
       },
@@ -117,7 +117,7 @@ export default {
           id: user.length + 1,
           firstName: this.formData.ime,
           lastName: this.formData.prezime,
-          password: this.formData.password,
+          broj_telefona: this.formData.broj_telefona,
           email: this.formData.email,
           password: this.formData.password,
         };
