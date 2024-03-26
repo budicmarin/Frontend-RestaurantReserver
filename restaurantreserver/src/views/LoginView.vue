@@ -41,13 +41,13 @@ export default {
   name: "login",
   data() {
     return {
-      username: "",
+      email: "",
       password: "",
     };
   },
   methods: {
     login() {
-      /*  console.log("Login", this.username);
+      console.log("Login", this.username);
 
       const foundUser = user.find((user) => user.email === this.username);
 
@@ -61,13 +61,12 @@ export default {
 
         console.log(curentUser);
         console.log(user);
-        this.$router.replace({ name: "userview" });
-      } else {
-        console.log("Invalid username or password");
-      } */
+        cd;
+      }
       try {
         const response = api.post("/auth", this.username, this.password);
         console.log(response);
+        this.$router.replace({ name: "userview" });
       } catch (error) {
         console.error("Error", error);
       }

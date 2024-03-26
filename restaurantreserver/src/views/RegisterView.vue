@@ -123,7 +123,7 @@ export default {
         };
 
         user.push(newUser);
-        const response = api.post("http://localhost:3000/gost", newUser);
+        const response = api.post("http://localhost:3000/gosti", newUser);
       }
       console.log(user);
     },
